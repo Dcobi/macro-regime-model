@@ -14,11 +14,12 @@ Macro regimes are easy to identify in hindsight. Can they be identified **in rea
 2. **Asset behaviour:** returns of seven asset classes (US and European equities, long and short US Treasuries, investment-grade credit, gold, commodities) in each regime, in USD and EUR.
 3. **Backtest:** a euro investor tilts a diversified neutral portfolio by regime, using only data that would have been published at the time, after trading costs. Compared with the neutral portfolio and a 60/40 portfolio.
 
-## Key findings so far (2006–2026, euro investor)
+## Key findings (2006–2026, euro investor)
 
-- With instant knowledge of the regime, tilts would have added about **2.3 percentage points a year** over the neutral portfolio.
-- With realistic publication lags, the advantage falls to about **0.3 points**, with the same risk-adjusted return as the neutral portfolio. Most of the value is lost to data delays.
-- The **static diversified portfolio** had a much smaller worst loss than 60/40 (about −16% vs −25%).
+- **Regimes contain information, but the edge is fragile.** Using economic sentiment for Euro area growth, regime tilts added about 1 percentage point a year over a static diversified portfolio after realistic publication lags and trading costs. However, the gain came almost entirely from 2006–2015 (mainly 2008); since 2016 the strategy has not outperformed.
+- **Better data beats faster data.** Replacing industrial production with the Economic Sentiment Indicator raised the edge from 0.3 to about 1 point a year, and results were similar whether the signal was delayed by 1 or 4 months.
+- **Diversification is the robust result.** A static portfolio of seven asset classes beat 60/40 on a risk-adjusted basis in both halves of the sample, with a much smaller worst loss (about −16% vs −25%).
+
 
 ## Structure
 
@@ -44,7 +45,8 @@ pip install -r requirements.txt
 
 Then run the notebooks in order: 01 → 02 → 03.
 
-## Next steps
+## Possible extensions
 
-- Faster Euro area data (flash HICP, Economic Sentiment Indicator) to reduce the publication lag
-- Robustness tests: trading costs, US/USD version, lower-turnover rules
+- Threshold rule to reduce switching in flat periods
+- US / dollar version of the backtest
+- Sensitivity to higher trading costs
